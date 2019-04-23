@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="splash">
+        <img src="" alt="" class="splashbillede">
+        <h1 class="overskrift"></h1>
+    </div>
+
+
+    <div id="attraktioner">
+        <template>
+            <img src="" alt="" class="splash">
+            <h3 class="overskrift"></h3>
+        </template>
+
+    </div>
+
+    <div id="indhold">
+        <h2 class="overskrift"></h2>
+        <p class="indhold"></p>
+    </div>
+
+    <script>
+        let indhold;
+        let attraktioner;
+
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            async function getJson() {
+                let url = "http://firehill.dk/kea/2/07/kalklandetWP/wordpress/wp-json/wp/v2/forside/71"
+                let jsonData = await fetch(url);
+                indhold = await jsonData.json();
+                visIndhold();
+            }
+
+            function visIndhold() {
+                document.querySelector("#splash .splashbillede").src = indhold.splashbillede.guid;
+                document.querySelector("#splash .overskrift").textContent = indhold.title.rendered;
+
+                document.querySelector("#indhold .overskrift").textContent = indhold.tagline;
+                document.querySelector("#indhold .indhold").textContent = indhold.indhold;
+
+            }
+
+            getJson();
+
+            async function getJson2() {
+                let url = "http://firehill.dk/kea/2/07/kalklandetWP/wordpress/wp-json/wp/v2/attraktion"
+                let jsonData = await fetch(url);
+                attraktioner = await jsonData.json();
+                visAttraktioner();
+            }
+
+            function visAttraktioner() {
+                let dest = document.querySelector("#attraktioner");
+                let temp = document.querySelector("template");
+
+                attraktioner.forEach(attraktion => {
+                    let klon = temp.cloneNode(true).content;
+                    klon.querySelector(".splash").src = attraktion.splash.guid;
+                    klon.querySelector(".overskrift").textContent = attraktion.title.rendered;
+                    dest.appendChild(klon);
+                })
+            }
+
+            getJson2();
+
+        }
+    </script>
+</body>
+
+</html>

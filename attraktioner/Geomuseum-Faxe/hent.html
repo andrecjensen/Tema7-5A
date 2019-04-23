@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <img src="" alt="" class="splash">
+    <h1 class="overskrift"></h1>
+    <main class="undertitel"></main>
+
+    <section>
+        <h3 class="om_titel"></h3>
+        <p class="om_indhold"></p>
+        <img src="" alt="" class="om_billede">
+    </section>
+
+    <section>
+        <h3 class="besoeg_titel"></h3>
+        <p class="besoeg_indhold"></p>
+        <img src="" alt="" class="besoeg_billede">
+    </section>
+
+    <script>
+        let indhold;
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            async function getJson() {
+                let url = "http://firehill.dk/kea/2/07/kalklandetWP/wordpress/wp-json/wp/v2/attraktion/62"
+                let jsonData = await fetch(url);
+                indhold = await jsonData.json();
+                visIndhold();
+            }
+
+            function visIndhold() {
+                document.querySelector(".splash").src = indhold.splash.guid;
+
+                document.querySelector(".overskrift").textContent = indhold.title.rendered;
+                document.querySelector(".undertitel").textContent = indhold.titel;
+                document.querySelector(".om_titel").textContent = indhold.om_titel;
+                document.querySelector(".om_indhold").textContent = indhold.om_indhold;
+                document.querySelector(".om_billede").src = indhold.om_billede.guid;
+                document.querySelector(".besoeg_titel").textContent = indhold.besoeg_titel;
+                document.querySelector(".besoeg_indhold").textContent = indhold.besoeg_indhold;
+                document.querySelector(".besoeg_billede").src = indhold.besoeg_billede.guid;
+
+            }
+            getJson();
+        }
+    </script>
+</body>
+
+</html>
