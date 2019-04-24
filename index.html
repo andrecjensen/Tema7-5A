@@ -10,34 +10,33 @@
 
 <body>
 
-    <div id="splash">
+    <div id="splash_forside">
         <img src="" alt="" class="splashbillede">
         <div class="text">
             <h1 class="overskrift"></h1>
         </div>
     </div>
 
+    <div id="forside_wrapper">
+        <div id="attraktioner">
 
-    <div id="attraktioner">
-
-    </div>
-
-    <!-- TEMPLATE -->
-    <template>
-        <div class="box">
-            <img src="" alt="" class="splash">
-            <div class="text">
-                <h3 class="overskrift"></h3>
-            </div>
         </div>
-    </template>
 
-    <div id="indhold">
-        <h2 class="overskrift"></h2>
-        <p class="indhold"></p>
+        <!-- TEMPLATE -->
+        <template>
+            <div class="box">
+                <img src="" alt="" class="splash">
+                <div class="text">
+                    <h3 class="overskrift"></h3>
+                </div>
+            </div>
+        </template>
+
+        <div id="indhold">
+            <h2 class="overskrift"></h2>
+            <p class="indhold"></p>
+        </div>
     </div>
-
-
 
     <script>
         let indhold;
@@ -54,8 +53,8 @@
             }
 
             function visIndhold() {
-                document.querySelector("#splash .splashbillede").src = indhold.splashbillede.guid;
-                document.querySelector("#splash .overskrift").textContent = indhold.title.rendered;
+                document.querySelector("#splash_forside .splashbillede").src = indhold.splashbillede.guid;
+                document.querySelector("#splash_forside .overskrift").textContent = indhold.title.rendered;
 
                 document.querySelector("#indhold .overskrift").textContent = indhold.tagline;
                 document.querySelector("#indhold .indhold").textContent = indhold.indhold;

@@ -2,7 +2,6 @@
 
 body {
     margin: auto;
-    max-width: 1200px;
 }
 
 img {
@@ -23,21 +22,28 @@ a {}
 
 /* FORSIDE - Splash */
 
-#splash {
+#forside_wrapper {
+    margin: auto;
+    margin-top: -45px;
+    max-width: 1200px;
+    padding: 10px;
+}
+
+#splash_forside {
     position: relative;
     display: inline-block;
 }
 
-#splash .text {
+#splash_forside .text {
     position: absolute;
     z-index: 999;
     margin: 0 auto;
     left: 0;
     right: 0;
-    top: 40%;
+    top: 30%;
     /* Adjust this value to move the positioned div up and down */
     text-align: center;
-    width: 60%;
+    width: 70%;
     /* Set the width of the positioned div */
 }
 
@@ -50,13 +56,25 @@ a {}
     grid-auto-rows: minmax(100px, auto);
 }
 
-.box {
+#attraktioner .box {
+    margin-bottom: 5px;
     position: relative;
     display: inline-block;
     /* Make the width of box same as image */
+    box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.25);
+    transition: all .2s ease-in-out;
 }
 
-.box .text {
+#attraktioner .box:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+}
+
+#attraktioner img {
+    margin-bottom: -4px;
+}
+
+#attraktioner .text {
     position: absolute;
     z-index: 999;
     margin: 0 auto;
@@ -72,9 +90,18 @@ a {}
 /* TABLET  */
 
 @media only screen and (min-width: 768px) {
+
+    /*    FORSIDE */
     #attraktioner {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    #splash_forside .text {
+        text-align: left;
+        width: 80%;
+        top: 30%;
+    }
+
 }
 
 /* DESKTOP */
