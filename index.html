@@ -25,7 +25,7 @@
         <!-- TEMPLATE -->
         <template>
             <div class="box">
-                <img src="" alt="" class="splash">
+                <a href="" class="link"><img src="" alt="" class="splash"></a>
                 <div class="text">
                     <h3 class="overskrift"></h3>
                 </div>
@@ -55,10 +55,8 @@
             function visIndhold() {
                 document.querySelector("#splash_forside .splashbillede").src = indhold.splashbillede.guid;
                 document.querySelector("#splash_forside .overskrift").textContent = indhold.title.rendered;
-
                 document.querySelector("#indhold .overskrift").textContent = indhold.tagline;
                 document.querySelector("#indhold .indhold").textContent = indhold.indhold;
-
             }
 
             getJson();
@@ -77,6 +75,7 @@
                 attraktioner.forEach(attraktion => {
                     let klon = temp.cloneNode(true).content;
                     klon.querySelector(".splash").src = attraktion.splash.guid;
+                    klon.querySelector(".link").href = attraktion.link;
                     klon.querySelector(".overskrift").textContent = attraktion.title.rendered;
                     dest.appendChild(klon);
                 })
