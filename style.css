@@ -2,10 +2,12 @@
 
 body {
     margin: auto;
+    box-sizing: border-box;
 }
 
 img {
     width: 100%;
+    height: 100%;
 }
 
 /* TYPOGRAFI */
@@ -19,6 +21,42 @@ h3 {}
 p {}
 
 a {}
+
+/* Museum */
+
+#cover,
+#about,
+#visit {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#about,
+#visit {
+    padding: 3.28571vw 0;
+}
+
+
+section:nth-child(odd) {
+    background-color: rgb(20, 179, 177);
+}
+
+section:nth-child(even) {
+    background-color: white;
+}
+
+.column {
+    flex-basis: 400px;
+    flex-grow: 1;
+    padding-right: 7.14286vw;
+    padding-left: 7.14286vw;
+}
+
+.velkommen {
+    padding-right: 7.14286vw;
+    padding-left: 10.14286vw;
+}
+
 
 /* FORSIDE - Splash */
 
@@ -121,4 +159,15 @@ a {}
 
 /* DESKTOP */
 
-@media only screen and (min-width: 1025px) {}
+@media only screen and (min-width: 1025px) {
+
+    #about,
+    #visit {
+        padding: 3vw;
+    }
+
+    #cover {
+        padding: 0vw;
+    }
+}
+}
