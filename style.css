@@ -47,6 +47,22 @@ a {}
     /* Set the width of the positioned div */
 }
 
+#indhold {
+    margin-top: 10px;
+    padding: 3px 10px;
+    border: solid 0.5px;
+    border-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+#indhold h2 {
+    margin-top: 10px;
+}
+
+#indhold p {
+    margin-bottom: 10px;
+}
+
 /* FORSIDE – Attraktioner */
 
 #attraktioner {
@@ -101,7 +117,6 @@ a {}
         width: 80%;
         top: 30%;
     }
-
 }
 
 /* DESKTOP */
