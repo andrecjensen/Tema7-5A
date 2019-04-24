@@ -1,7 +1,82 @@
+/* OBS! Vi designer Mobile First */
+
 body {
     margin: auto;
+    max-width: 1200px;
 }
 
 img {
     width: 100%;
 }
+
+/* TYPOGRAFI */
+
+h1 {}
+
+h2 {}
+
+h3 {}
+
+p {}
+
+a {}
+
+/* FORSIDE - Splash */
+
+#splash {
+    position: relative;
+    display: inline-block;
+}
+
+#splash .text {
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 40%;
+    /* Adjust this value to move the positioned div up and down */
+    text-align: center;
+    width: 60%;
+    /* Set the width of the positioned div */
+}
+
+/* FORSIDE – Attraktioner */
+
+#attraktioner {
+    display: grid;
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.box {
+    position: relative;
+    display: inline-block;
+    /* Make the width of box same as image */
+}
+
+.box .text {
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 40%;
+    /* Adjust this value to move the positioned div up and down */
+    text-align: center;
+    width: 60%;
+    /* Set the width of the positioned div */
+}
+
+/* TABLET  */
+
+@media only screen and (min-width: 768px) {
+    #attraktioner {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* DESKTOP */
+
+@media only screen and (min-width: 1025px) {}
