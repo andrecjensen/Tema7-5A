@@ -99,12 +99,14 @@ section:nth-child(even) {
 }
 
 #indhold h2 {
-    margin-top: 10px;
+    margin-top: 25px;
     text-align: center;
 }
 
 #indhold p {
-    margin-bottom: 10px;
+    margin: auto;
+    margin-bottom: 25px;
+    max-width: 600px;
 }
 
 /* FORSIDE – Attraktioner */
@@ -117,7 +119,6 @@ section:nth-child(even) {
 }
 
 #attraktioner img {
-    margin-bottom: 5px;
     position: relative;
     display: inline-block;
 
@@ -150,13 +151,18 @@ section:nth-child(even) {
 
     /*    FORSIDE */
     #attraktioner {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 
-    #splash_forside .text {
+    #splash_forside .logo {
         text-align: left;
-        width: 80%;
+        width: 40%;
         top: 30%;
+    }
+
+    #indhold {
+        margin: 10px -40px -10px -40px;
+        padding: 3px 40px;
     }
 }
 
@@ -172,5 +178,16 @@ section:nth-child(even) {
     #cover {
         padding: 0vw;
     }
-}
+
+    #splash_forside .logo {
+        text-align: left;
+        width: 20%;
+        top: 30%;
+        left: 5%;
+    }
+
+    #indhold {
+        margin: 10px -1000px -10px -1000px;
+        padding: 3px 1000px;
+    }
 }
