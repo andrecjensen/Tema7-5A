@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geomusem Faxe - Kalklandet</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+
+    <section id="cover"><img src="" alt="" class="splash">
+        <div class="velkommen">
+            <h1 class="overskrift"></h1>
+            <main class="undertitel"></main>
+        </div>
+    </section>
+
+
+    <section id="about">
+        <div class="column">
+            <h3 class="om_titel"></h3>
+            <p class="om_indhold"></p>
+        </div>
+        <div class="column"><img src="" alt="" class="om_billede"></div>
+    </section>
+
+    <section id="visit">
+        <div class="column"><img src="" alt="" class="besoeg_billede"></div>
+        <div class="column">
+            <h3 class="besoeg_titel"></h3>
+            <p class="besoeg_indhold"></p>
+        </div>
+    </section>
+
+    <script>
+        let indhold;
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            async function getJson() {
+                let url = "http://firehill.dk/kea/2/07/kalklandetWP/wordpress/wp-json/wp/v2/attraktion/62"
+                let jsonData = await fetch(url);
+                indhold = await jsonData.json();
+                visIndhold();
+            }
+
+            function visIndhold() {
+                document.querySelector(".splash").src = indhold.splash.guid;
+
+                document.querySelector(".overskrift").textContent = indhold.title.rendered;
+                document.querySelector(".undertitel").textContent = indhold.titel;
+                document.querySelector(".om_titel").textContent = indhold.om_titel;
+                document.querySelector(".om_indhold").textContent = indhold.om_indhold;
+                document.querySelector(".om_billede").src = indhold.om_billede.guid;
+                document.querySelector(".besoeg_titel").textContent = indhold.besoeg_titel;
+                document.querySelector(".besoeg_indhold").textContent = indhold.besoeg_indhold;
+                document.querySelector(".besoeg_billede").src = indhold.besoeg_billede.guid;
+
+            }
+            getJson();
+        }
+    </script>
+    <footer></footer>
+</body>
+
+</html>

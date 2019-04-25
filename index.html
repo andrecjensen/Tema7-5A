@@ -12,8 +12,8 @@
 
     <div id="splash_forside">
         <img src="" alt="" class="splashbillede">
-        <div class="text">
-            <h1 class="overskrift"></h1>
+        <div class="logobox">
+            <img src="" alt="" class="logo">
         </div>
     </div>
 
@@ -24,12 +24,18 @@
 
         <!-- TEMPLATE -->
         <template>
+
             <div class="box">
                 <a href="" class="link"><img src="" alt="" class="splash"></a>
                 <div class="text">
                     <h3 class="overskrift"></h3>
                 </div>
             </div>
+
+
+            <img src="" alt="" class="splash">
+
+
         </template>
 
         <div id="indhold">
@@ -54,8 +60,12 @@
 
             function visIndhold() {
                 document.querySelector("#splash_forside .splashbillede").src = indhold.splashbillede.guid;
+
                 document.querySelector("#splash_forside .overskrift").textContent = indhold.title.rendered;
                 document.querySelector("#indhold .overskrift").textContent = indhold.tagline;
+                document.querySelector("#splash_forside .logo").src = indhold.logo.guid;
+
+                document.querySelector("#indhold .overskrift").textContent = indhold.title.rendered;
                 document.querySelector("#indhold .indhold").textContent = indhold.indhold;
             }
 
@@ -77,6 +87,7 @@
                     klon.querySelector(".splash").src = attraktion.splash.guid;
                     klon.querySelector(".link").href = attraktion.link;
                     klon.querySelector(".overskrift").textContent = attraktion.title.rendered;
+                    klon.querySelector(".splash").src = attraktion.linkbillede_vertikal.guid;
                     dest.appendChild(klon);
                 })
             }
