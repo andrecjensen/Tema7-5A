@@ -2,6 +2,7 @@
 
 body {
     margin: auto;
+    font-family: arial;
 }
 
 img {
@@ -10,11 +11,18 @@ img {
 
 /* TYPOGRAFI */
 
-h1 {}
+h1 {
+    text-transform: uppercase;
+}
 
-h2 {}
+h2 {
+    text-transform: uppercase;
+}
 
-h3 {}
+h3 {
+    text-transform: uppercase;
+    color: white;
+}
 
 p {}
 
