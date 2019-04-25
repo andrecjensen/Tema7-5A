@@ -22,12 +22,9 @@
 
         <!-- TEMPLATE -->
         <template>
-            <div class="box">
-                <img src="" alt="" class="splash">
-                <div class="text">
-                    <h3 class="overskrift"></h3>
-                </div>
-            </div>
+
+            <img src="" alt="" class="splash">
+
         </template>
 
         <div id="indhold">
@@ -52,6 +49,7 @@
 
             function visIndhold() {
                 document.querySelector("#splash_forside .splashbillede").src = indhold.splashbillede.guid;
+                document.querySelector("#splash_forside .logo").src = indhold.logo.guid;
 
                 document.querySelector("#indhold .overskrift").textContent = indhold.title.rendered;
                 document.querySelector("#indhold .indhold").textContent = indhold.indhold;
@@ -73,8 +71,8 @@
 
                 attraktioner.forEach(attraktion => {
                     let klon = temp.cloneNode(true).content;
-                    klon.querySelector(".splash").src = attraktion.splash.guid;
-                    klon.querySelector(".overskrift").textContent = attraktion.title.rendered;
+                    klon.querySelector(".splash").src = attraktion.linkbillede_vertikal.guid;
+
                     dest.appendChild(klon);
                 })
             }
