@@ -12,37 +12,44 @@ img {
 
 /* TYPOGRAFI */
 
-h1 {}
+h1 {
+    font-family: "Times New Roman", Times, serif;;
+}
 
-h2 {}
+h2 {font-family: "Arial", sans-serif;}
 
-h3 {}
+h3 {font-family: "Arial", sans-serif;}
 
-p {}
+p {font-family: "Arial", sans-serif;}
 
-a {}
+a {font-family: "Arial", sans-serif;}
 
 /* Museum */
 
 #cover,
-#about,
-#visit {
+#besog,
+#aktuel,
+#undervisning,
+#kontakt{
     display: flex;
     flex-wrap: wrap;
 }
 
-#about,
-#visit {
+#besog,
+#aktuel,
+#undervisning,
+#kontakt {
     padding: 3.28571vw 0;
 }
 
 
 section:nth-child(odd) {
-    background-color: rgb(20, 179, 177);
+    background-color: white;
 }
 
 section:nth-child(even) {
-    background-color: white;
+    background-color: #2F7993;
+    color: white;
 }
 
 .column {
@@ -101,6 +108,82 @@ section:nth-child(even) {
     margin-bottom: 10px;
 }
 
+#pris {
+    background-image: url(SVGs/Pris.svg);
+    width: 34vw;
+    height: 40vw;
+    position: relative;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    top: 1vw;
+    left: 22vw;
+}
+
+
+
+#adresse {
+    background-image: url(SVGs/Adresse.svg);
+    width: 34vw;
+    height: 40vw;
+    position: relative;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    top: 1vw;
+    left: 22vw;
+}
+
+
+#tider {
+    background-image: url(SVGs/Tider.svg);
+    width: 34vw;
+    height: 40vw;
+    position: relative;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    top: 1vw;
+    left: 22vw;
+}
+
+#rundvisning {
+    background-image: url(SVGs/Rundvisning.svg);
+   width: 34vw;
+    height: 40vw;
+    position: relative;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    top: 1vw;
+    left: 22vw;
+}
+
+.prisen{
+text-align: center;}
+
+.adressen {
+        text-align:center;
+    }
+    
+    .tiden {
+        text-align:center;
+    }
+    
+    .rundvisningen {
+        text-align:center;
+    }
+
+
+#column_container {
+padding-right: 7.14286vw;
+    padding-left: 7.14286vw;
+}
+
+#section_wrapper{
+     display: grid;
+     grid-template-columns: repeat(1, 1fr);
+     margin: 1rem;
+     grid-gap: 3rem;
+}
+
+
 /* FORSIDE – Attraktioner */
 
 #attraktioner {
@@ -141,6 +224,74 @@ section:nth-child(even) {
     /* Set the width of the positioned div */
 }
 
+/*BURGERMENU*/
+ #topmenu {
+     list-style-type: none;
+     transition: transform 1s;
+     background: #D6E1E2;
+     z-index: 1;
+     width: 100%;
+     height: 100%;
+     top: -1rem;
+     text-decoration: underline;
+     position: fixed;
+ }
+
+
+ #topmenu a {
+    text-decoration: none;
+     color: black;
+     text-transform: uppercase;
+     font-size: 1.6rem;
+ }
+
+
+ #topmenu li {
+     padding-top: 7rem;
+     padding-left: 6rem;
+ }
+
+ .hidden {
+     transform: translateX(-150%);
+
+ }
+
+ #menuknap {
+     display: inline-block;
+     color: black;
+     font-size: 2rem;
+     padding: 1.5rem;
+     z-index: 2;
+     position: fixed;
+
+ }
+
+ .topnav {
+     list-style-type: none;
+     transition: transform 1s;
+     z-index: 1;
+     width: 44%;
+     padding: 0.8rem;
+     background: #D6E1E2;
+     position: absolute;
+     left: 51vw;
+     top: 1vw;
+     word-spacing: 3vw;
+     display: none;
+
+ }
+
+ .topnav a {
+     font-size: 1.3rem;
+     text-decoration: none;
+     color: black;
+     text-transform: uppercase;
+ }
+
+ .topnav a:hover {
+     font-size: 1.4rem;
+ }
+
 /* TABLET  */
 
 @media only screen and (min-width: 768px) {
@@ -155,19 +306,82 @@ section:nth-child(even) {
         width: 80%;
         top: 30%;
     }
+      .burgermenu {
+         display: none;
+     }
+     
 }
+
 
 /* DESKTOP */
 
 @media only screen and (min-width: 1025px) {
 
-    #about,
-    #visit {
+    #besog,
+#aktuel,
+#undervisning,
+#kontakt {
         padding: 3vw;
     }
 
     #cover {
         padding: 0vw;
     }
+    
+    .topnav {display: block;}
+    
+    #section_wrapper{
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     margin: 1rem;
+     grid-gap: 3rem;
 }
+    #pris {
+    width: 9vw;
+    height: 11vw;
+    left: 1vw;
 }
+
+    
+    #adresse {
+    width: 9vw;
+    height: 11vw;
+    left: 1vw;
+}
+    
+    #tider {
+    width: 9vw;
+    height: 11vw;
+    left: 1vw;
+}
+    
+    #rundvisning {
+    width: 9vw;
+    height: 11vw;
+    left: 1vw;
+}
+    
+    #column_container {
+        padding-right: 0;
+    padding-left: 0;
+}
+    .prisen {
+        text-align:left;
+    }
+    
+    .adressen {
+        text-align:left;
+    }
+    
+    .tiden {
+        text-align:left;
+    }
+    
+    .rundvisningen {
+        text-align:left;
+    }
+
+
+
+}
+
