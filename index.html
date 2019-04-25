@@ -25,7 +25,16 @@
         <!-- TEMPLATE -->
         <template>
 
+            <div class="box">
+                <a href="" class="link"><img src="" alt="" class="splash"></a>
+                <div class="text">
+                    <h3 class="overskrift"></h3>
+                </div>
+            </div>
+
+
             <img src="" alt="" class="splash">
+
 
         </template>
 
@@ -50,16 +59,22 @@
             }
 
             function visIndhold() {
+<<<<<<< HEAD
                 document.querySelector("#splash_forside").style.backgroundImage = "url('http://firehill.dk/kea/2/07/kalklandetWP/wordpress/wp-content/uploads/2019/04/baggrund-forside.jpg')";
 
                 // indhold.splashbillede.guid
 
 
+=======
+                document.querySelector("#splash_forside .splashbillede").src = indhold.splashbillede.guid;
+
+                document.querySelector("#splash_forside .overskrift").textContent = indhold.title.rendered;
+                document.querySelector("#indhold .overskrift").textContent = indhold.tagline;
+>>>>>>> Tema7-5A/master
                 document.querySelector("#splash_forside .logo").src = indhold.logo.guid;
 
                 document.querySelector("#indhold .overskrift").textContent = indhold.title.rendered;
                 document.querySelector("#indhold .indhold").textContent = indhold.indhold;
-
             }
 
             getJson();
@@ -77,8 +92,10 @@
 
                 attraktioner.forEach(attraktion => {
                     let klon = temp.cloneNode(true).content;
+                    klon.querySelector(".splash").src = attraktion.splash.guid;
+                    klon.querySelector(".link").href = attraktion.link;
+                    klon.querySelector(".overskrift").textContent = attraktion.title.rendered;
                     klon.querySelector(".splash").src = attraktion.linkbillede_vertikal.guid;
-
                     dest.appendChild(klon);
                 })
             }
