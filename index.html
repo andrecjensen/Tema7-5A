@@ -25,7 +25,7 @@
         <!-- TEMPLATE -->
         <template>
 
-            <img src="" alt="" class="splash">
+            <a href="" class="link"><img src="" alt="" class="splash"></a>
 
 
         </template>
@@ -84,7 +84,7 @@
                 attraktioner.forEach(attraktion => {
                     let klon = temp.cloneNode(true).content;
                     klon.querySelector(".splash").src = attraktion.splash.guid;
-
+                     klon.querySelector(".link").href = attraktion.link;
                     klon.querySelector(".splash").src = attraktion.linkbillede_vertikal.guid;
                     dest.appendChild(klon);
                 })
