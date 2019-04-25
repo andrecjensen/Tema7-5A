@@ -282,6 +282,7 @@ section:nth-child(even) {
     padding: 1.5rem;
     z-index: 2;
     position: fixed;
+    left: 80vw;
 
 }
 
