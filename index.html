@@ -12,9 +12,7 @@
 
     <div id="splash_forside">
         <img src="" alt="" class="splashbillede">
-        <div class="text">
-            <h1 class="overskrift"></h1>
-        </div>
+        <img src="" alt="" class="logo">
     </div>
 
     <div id="forside_wrapper">
@@ -54,9 +52,8 @@
 
             function visIndhold() {
                 document.querySelector("#splash_forside .splashbillede").src = indhold.splashbillede.guid;
-                document.querySelector("#splash_forside .overskrift").textContent = indhold.title.rendered;
 
-                document.querySelector("#indhold .overskrift").textContent = indhold.tagline;
+                document.querySelector("#indhold .overskrift").textContent = indhold.title.rendered;
                 document.querySelector("#indhold .indhold").textContent = indhold.indhold;
 
             }

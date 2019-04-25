@@ -2,11 +2,8 @@
 
 body {
     margin: auto;
-<<<<<<< HEAD
     font-family: arial;
-=======
     box-sizing: border-box;
->>>>>>> Tema7-5A/master
 }
 
 img {
@@ -83,7 +80,7 @@ section:nth-child(even) {
     display: inline-block;
 }
 
-#splash_forside .text {
+#splash_forside .logo {
     position: absolute;
     z-index: 999;
     margin: 0 auto;
@@ -97,15 +94,14 @@ section:nth-child(even) {
 }
 
 #indhold {
-    margin-top: 10px;
+    margin: 10px -10px -10px -10px;
     padding: 3px 10px;
-    border: solid 0.5px;
-    border-color: #f0f0f0;
-    border-radius: 5px;
+    background-color: #F5F4F4;
 }
 
 #indhold h2 {
     margin-top: 10px;
+    text-align: center;
 }
 
 #indhold p {
@@ -116,16 +112,18 @@ section:nth-child(even) {
 
 #attraktioner {
     display: grid;
-    grid-template-rows: auto;
+    grid-template-columns: repeat(2, 2fr);
     grid-gap: 10px;
     grid-auto-rows: minmax(100px, auto);
 }
 
 #attraktioner .box {
     margin-bottom: 5px;
+    height: 350px;
     position: relative;
     display: inline-block;
-    /* Make the width of box same as image */
+
+    /*    Skygge og animation */
     box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.25);
     transition: all .2s ease-in-out;
 }
@@ -148,7 +146,7 @@ section:nth-child(even) {
     top: 40%;
     /* Adjust this value to move the positioned div up and down */
     text-align: center;
-    width: 60%;
+    width: 90%;
     /* Set the width of the positioned div */
 }
 
