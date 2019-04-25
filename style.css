@@ -83,7 +83,7 @@ section:nth-child(even) {
     position: absolute;
     z-index: 999;
     margin-left: 10px;
-    top: 30%;
+    top: 25%;
     text-align: left;
     width: 50%;
 }
