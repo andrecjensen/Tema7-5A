@@ -179,11 +179,15 @@ section:nth-child(even) {
         padding: 0vw;
     }
 
+    #splash_forside .logobox {
+        max-width: 1200px;
+        margin: auto;
+    }
+
     #splash_forside .logo {
         text-align: left;
-        width: 20%;
+        width: 400px;
         top: 30%;
-        left: 5%;
     }
 
     #indhold {
