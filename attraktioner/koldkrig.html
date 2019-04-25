@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stevns Klint - Kalklandet</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <nav>
+
+
+        <span class="topnav">
+            <a href="#besog">Besøg</a>
+            <a href="#aktuel">Aktuelt</a>
+            <a href="#undervisning">Undervisning</a>
+            <a href="#kontakt">Kontakt</a>
+
+        </span>
+
+        <div class="burgermenu">
+            <div id="menuknap">☰</div>
+            <a href="#splash">
+                <div class="logo"></div>
+            </a>
+            <ul id="topmenu" class="hidden">
+                <li><a href="#besog" class="link">Besøg</a></li>
+                <li><a href="#aktuel" class="link2">Aktuelt</a></li>
+                <li><a href="#undervisning" class="link3">Undervisning</a></li>
+                <li><a href="#kontakt" class="link4">Kontakt</a></li>
+
+            </ul>
+        </div>
+
+
+
+    </nav>
+
+    <section id="cover"><img src="" alt="" class="splash">
+    </section>
+
+    <section id="besog">
+        <h2 class="besoeg_titel"></h2>
+          <div id="section_wrapper"> <div id="column_container">
+            <div id="pris"></div>
+            <p class="prisen">
+            </p>
+        </div>
+        <div id="column_container">
+            <div id="adresse"></div>
+            <p class="adressen">Her står Adressen</p>
+        </div>
+        <div id="column_container">
+            <div id="tider"></div>
+            <p class="tiden">Her står priserne</p>
+        </div>
+        <div id="column_container">
+            <div id="rundvisning"></div>
+            <p class="rundvisningen">Her står priserne</p>
+        </div>
+
+        </div>
+
+    </section>
+
+    <section id="aktuel">
+        <div class="column">
+            <h3 class="aktuel_titel"></h3>
+            <p class="aktuel_indhold"></p>
+        </div>
+        <div class="column"><img src="" alt="" class="aktuel_billede"></div>
+    </section>
+
+
+
+    <section id="undervisning">
+        <div class="column"><img src="" alt="" class="undervisning_billede"></div>
+        <div class="column">
+            <h2 class="undervisning_titel"></h2>
+            <p class="undervisning_indhold"></p>
+        </div>
+    </section>
+
+
+
+
+    <section id="kontakt">
+        <div class="column">
+            <h3 class="kontakt_titel"></h3>
+            <p class="kontakt_indhold"></p>
+
+        </div>
+        <div class="column"><img src="" alt="" class="kontakt_billede"></div>
+
+<!--
+   <a href="https://www.facebook.com/stevnsklint/"><img src="https://image.flaticon.com/icons/png/512/33/33702.png" alt=""></a>
+        <a href="https://www.instagram.com/oestsjaellandsmuseum/"></a>
+-->
+
+
+    </section>
+
+
+
+    <script>
+        window.addEventListener("load", sidenVises);
+
+        function sidenVises() {
+            console.log("siden vises");
+            //klik på topmenu-knap
+            document.querySelector("#menuknap").addEventListener("click", toggletopmenu);
+            document.querySelector(".link").addEventListener("click", fjern);
+            document.querySelector(".link2").addEventListener("click", fjern);
+            document.querySelector(".link3").addEventListener("click", fjern);
+            document.querySelector(".link4").addEventListener("click", fjern);
+        }
+
+        function toggletopmenu() {
+            console.log("toggle topmenu");
+            document.querySelector("#topmenu").classList.toggle("hidden");
+
+
+            let erSkjult = document.querySelector("#topmenu").classList.contains("hidden");
+
+            if (erSkjult == true) {
+                //        topmenuen er nu skjult - ændre den til☰
+                document.querySelector("#menuknap").textContent = "☰";
+            } else {
+                //        topmenuen er vist - ændre topmenuknap til ×
+                document.querySelector("#menuknap").textContent = " × "
+
+            }
+        }
+
+
+        function fjern() {
+            console.log("funktion fjern virker");
+            document.querySelector("#topmenu").classList.toggle("hidden");
+
+            let erSkjult = document.querySelector("#topmenu").classList.contains("hidden"); /*Lavet af Simon Christiansen*/
+
+            if (erSkjult == true) {
+                //        topmenuen er nu skjult - ændre den til☰
+                document.querySelector("#menuknap").textContent = "☰";
+            } else {
+                //        topmenuen er vist - ændre topmenuknap til ×
+                document.querySelector("#menuknap").textContent = " × "
+
+            }
+
+        }
+        let indhold;
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            async function getJson() {
+                let url = "http://firehill.dk/kea/2/07/kalklandetWP/wordpress/wp-json/wp/v2/attraktion/60"
+                let jsonData = await fetch(url);
+                indhold = await jsonData.json();
+                visIndhold();
+            }
+
+            function visIndhold() {
+                document.querySelector(".splash").src = indhold.splash.guid;
+                document.querySelector(".aktuel_titel").textContent = indhold.aktuel_titel;
+                document.querySelector(".aktuel_indhold").textContent = indhold.aktuel_indhold;
+                document.querySelector(".aktuel_billede").src = indhold.aktuel_billede.guid;
+                document.querySelector(".besoeg_titel").textContent = indhold.besoeg_titel;
+                document.querySelector(".undervisning_titel").textContent = indhold.undervisning_titel;
+                document.querySelector(".undervisning_indhold").innerHTML = indhold.undervisning_indhold;
+                document.querySelector(".undervisning_billede").src = indhold.undervisning_billede.guid;
+                document.querySelector(".kontakt_titel").innerHTML = indhold.kontakt_titel;
+                document.querySelector(".kontakt_indhold").innerHTML = indhold.kontakt_indhold;
+                document.querySelector(".kontakt_billede").src = indhold.kontakt_billede.guid;
+                document.querySelector(".prisen").innerHTML = indhold.priser;
+                document.querySelector(".adressen").innerHTML = indhold.adresse;
+                document.querySelector(".tiden").innerHTML = indhold.aabningstider;
+                document.querySelector(".rundvisningen").innerHTML = indhold.rundvisning;
+            }
+            getJson();
+        }
+    </script>
+    <footer></footer>
+</body></html>
