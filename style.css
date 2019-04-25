@@ -69,31 +69,29 @@ section:nth-child(even) {
 
 #forside_wrapper {
     margin: auto;
-    margin-top: -45px;
+    margin-top: -170vw;
     max-width: 1200px;
     padding: 10px;
 }
 
 #splash_forside {
-    position: relative;
-    display: inline-block;
+    height: 200vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 #splash_forside .logo {
     position: absolute;
     z-index: 999;
     margin-left: 10px;
-    top: 25%;
+    top: 40px;
     text-align: left;
     width: 50%;
 }
 
-#splash_forside .splashbillede {
-    opacity: 0.2;
-}
-
 #indhold {
-    margin: 10px -10px -10px -10px;
+    margin: 30px -10px -10px -10px;
     padding: 3px 10px;
     background-color: #F5F4F4;
 }
@@ -150,18 +148,27 @@ section:nth-child(even) {
 @media only screen and (min-width: 768px) {
 
     /*    FORSIDE */
+
+    #forside_wrapper {
+        margin-top: -80vw;
+    }
+
     #attraktioner {
         grid-template-columns: repeat(4, 1fr);
     }
 
+    #splash_forside {
+        height: 100vw;
+    }
+
     #splash_forside .logo {
         text-align: left;
-        width: 40%;
-        top: 30%;
+        width: 30%;
+        top: 50px;
     }
 
     #indhold {
-        margin: 10px -40px -10px -40px;
+        margin: 30px -40px -10px -40px;
         padding: 3px 40px;
     }
 }
@@ -179,19 +186,28 @@ section:nth-child(even) {
         padding: 0vw;
     }
 
+    /*    FORSIDE */
+    #forside_wrapper {
+        margin-top: -45vw;
+    }
+
+    #splash_forside {
+        height: 70vw;
+    }
+
     #splash_forside .logobox {
-        max-width: 1200px;
+        max-width: 1220px;
         margin: auto;
     }
 
     #splash_forside .logo {
         text-align: left;
-        width: 400px;
-        top: 30%;
+        width: 300px;
+        top: 50px;
     }
 
     #indhold {
-        margin: 10px -1000px -10px -1000px;
+        margin: 30px -1000px -10px -1000px;
         padding: 3px 1000px;
     }
 }

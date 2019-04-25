@@ -10,7 +10,7 @@
 
 <body>
 
-    <div id="splash_forside">
+    <div id="splash_forside" style="">
         <img src="" alt="" class="splashbillede">
         <div class="logobox">
             <img src="" alt="" class="logo">
@@ -50,7 +50,11 @@
             }
 
             function visIndhold() {
-                document.querySelector("#splash_forside .splashbillede").src = indhold.splashbillede.guid;
+                document.querySelector("#splash_forside").style.backgroundImage = "url('http://firehill.dk/kea/2/07/kalklandetWP/wordpress/wp-content/uploads/2019/04/baggrund-forside.jpg')";
+
+                // indhold.splashbillede.guid
+
+
                 document.querySelector("#splash_forside .logo").src = indhold.logo.guid;
 
                 document.querySelector("#indhold .overskrift").textContent = indhold.title.rendered;
