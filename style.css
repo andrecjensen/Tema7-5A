@@ -52,6 +52,12 @@ p {
 
 a {
     font-family: "Arial", sans-serif;
+    color: #FF6600;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
 }
 
 /* Museum */
