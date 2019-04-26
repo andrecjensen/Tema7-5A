@@ -10,19 +10,25 @@ img {
     width: 100%;
 }
 
-#cover img{
+#cover img {
     height: 100%;
 }
 
 /* TYPOGRAFI */
 
+@font-face {
+    font-family: LimeStone_bold;
+    src: url("path/LimeStone_bold.otf") format("opentype");
+}
+
 h1 {
     font-family: "Times New Roman", Times, serif;
-    ;
 }
 
 h2 {
-    font-family: "Arial", sans-serif;
+    font-family: "LimeStone_bold";
+    font-size: 24pt;
+    letter-spacing: 1pt;
 }
 
 h3 {
@@ -41,6 +47,7 @@ h3 {
 
 p {
     font-family: "Arial", sans-serif;
+    font-size: 14pt;
 }
 
 a {
@@ -127,7 +134,7 @@ section:nth-child(even) {
 #indhold p {
     margin: auto;
     margin-bottom: 25px;
-    max-width: 600px;
+    max-width: 800px;
 }
 
 #pris {
@@ -315,6 +322,12 @@ section:nth-child(even) {
 
 @media only screen and (min-width: 768px) {
 
+    /*    TYPOGRAFI */
+
+    h2 {
+        font-size: 30pt;
+    }
+
     /*    FORSIDE */
 
     #forside_wrapper {
@@ -370,7 +383,7 @@ section:nth-child(even) {
     }
 
     #splash_forside {
-        height: 70vw;
+        height: 60vw;
     }
 
     .topnav {
