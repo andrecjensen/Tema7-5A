@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Kalklandet – Østsjællands Museum</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -84,7 +84,7 @@
                 attraktioner.forEach(attraktion => {
                     let klon = temp.cloneNode(true).content;
                     klon.querySelector(".splash").src = attraktion.splash.guid;
-                     klon.querySelector(".link").href = attraktion.link;
+                    klon.querySelector(".link").href = attraktion.link;
                     klon.querySelector(".splash").src = attraktion.linkbillede_vertikal.guid;
                     dest.appendChild(klon);
                 })
