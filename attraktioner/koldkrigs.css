@@ -1,0 +1,22 @@
+section:nth-child(even) {
+    background-color: white;
+}
+
+section:nth-child(odd) {
+    background-color: #387288;
+    color: white;
+}
+
+.topnav{background:#38728894; }
+
+#topmenu {
+    background: #387288;
+}
+
+div.slider { 
+background: #387288;
+}
+
+#button {
+    color: #387288; 
+}

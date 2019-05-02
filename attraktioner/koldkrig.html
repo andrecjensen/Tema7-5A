@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Koldkrigsmuseet – Kalklandet</title>
     <link rel="stylesheet" href="../style.css">
+    <link rel="koldkrig stylesheet" href="koldkrigs.css">
+    <link rel="icon stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 
 <body>
@@ -13,21 +15,24 @@
 
 
         <span class="topnav">
+           <a href="#omos">Om os</a>
             <a href="#besog">Besøg</a>
-            <a href="#omos">Om Os</a>
             <a href="#undervisning">Undervisning</a>
             <a href="#kontakt">Kontakt</a>
-
+            <a href="../index.html">Kalklandet</a>
         </span>
 
         <div class="burgermenu">
             <div id="menuknap">☰</div>
+            <a href="#splash">
+                <div class="logo"></div>
+            </a>
             <ul id="topmenu" class="hidden">
-                <li><a href="#besog" class="link">Besøg</a></li>
                 <li><a href="#omos" class="link2">Om os</a></li>
+                <li><a href="#besog" class="link">Besøg</a></li>
                 <li><a href="#undervisning" class="link3">Undervisning</a></li>
                 <li><a href="#kontakt" class="link4">Kontakt</a></li>
-
+                <li><a href="../index.html" class="link5">Kalklandet</a></li>
             </ul>
         </div>
 
@@ -35,42 +40,74 @@
 
     </nav>
 
-    <section id="cover"><img src="" alt="" class="splash">
-    </section>
 
+    <section id="cover"><img src="" alt="" class="splash">
+     <div id="captioned-gallery">
+	<div class="slider">
+		<div>
+			 <img src="" alt="" class="mobilsplash1">
+
+		</div>
+		<div>
+			<img src="" alt="" class="mobilsplash2">
+		
+		</div>
+		<div>
+			<img src="" alt="" class="mobilsplash3">
+			
+		</div>
+		<div>
+			<img src="" alt="" class="mobilsplash4">
+			
+		</div>
+	</div>
+</div>
+    </section>
+    
+     <div id="undermenu">
+       <a href="" class="undermenulink1"> <img src="" alt="" class="navlink1"></a>
+       <a href="" class="undermenulink2"> <img src="" alt="" class="navlink2"></a>
+       <a href="" class="undermenulink3"> <img src="" alt="" class="navlink3"></a>
+       </div>
 
 
     <section id="omos">
         <div class="column">
-            <h3 class="omos_titel"></h3>
+            <h2 class="omos_titel"></h2>
             <p class="omos_indhold"></p>
         </div>
         <div class="column"><img src="" alt="" class="omos_billede"></div>
     </section>
 
- <section id="besog">
-        <h2 class="besoeg_titel"></h2>
-          <div id="section_wrapper"> <div id="column_container">
-            <div id="pris"></div>
-            <p class="prisen">
-            </p>
-        </div>
-        <div id="column_container">
-            <div id="adresse"></div>
-            <p class="adressen">Her står Adressen</p>
-        </div>
-        <div id="column_container">
-            <div id="tider"></div>
-            <p class="tiden">Her står priserne</p>
-        </div>
-        <div id="column_container">
-            <div id="rundvisning"></div>
-            <p class="rundvisningen">Her står priserne</p>
-        </div>
 
+    <section id="besog">
+       <div id="columnbesog">
+        <h2 class="besoeg_titel"></h2>
+        <div id="section_wrapper">
+            <div id="column_container">
+                <div id="pris"></div>
+                <p class="prisen"></p>
+                 <button id="button">Køb billet her</button>
+                
+            </div>
+            <div id="column_container">
+                <div id="adresse"></div>
+                <p class="adressen">Her står Adressen</p>
+            </div>
+            <div id="column_container">
+                <div id="tider"></div>
+                <p class="tiden">Her står priserne</p>
+            </div>
+            <div id="column_container">
+                <div id="rundvisning"></div>
+                <p class="rundvisningen">Her står priserne</p>
+            </div>
+        </div>
         </div>
 
     </section>
+
+
 
     <section id="undervisning">
         <div class="column"><img src="" alt="" class="undervisning_billede"></div>
@@ -78,6 +115,7 @@
             <h2 class="undervisning_titel"></h2>
             <p class="undervisning_indhold"></p>
         </div>
+        
     </section>
 
 
@@ -87,17 +125,14 @@
         <div class="column">
             <h3 class="kontakt_titel"></h3>
             <p class="kontakt_indhold"></p>
-
+            <span id="logoer"><a href="https://www.facebook.com/stevnsklint/"><i class="fab fa-facebook"></i></a><a href="https://www.instagram.com/oestsjaellandsmuseum/"><i class="fab fa-instagram"></a></i></span>
         </div>
         <div class="column"><img src="" alt="" class="kontakt_billede"></div>
-
-<!--
-   <a href="https://www.facebook.com/stevnsklint/"><img src="https://image.flaticon.com/icons/png/512/33/33702.png" alt=""></a>
-        <a href="https://www.instagram.com/oestsjaellandsmuseum/"></a>
--->
+        
 
 
     </section>
+
 
 
 
@@ -112,6 +147,7 @@
             document.querySelector(".link2").addEventListener("click", fjern);
             document.querySelector(".link3").addEventListener("click", fjern);
             document.querySelector(".link4").addEventListener("click", fjern);
+            document.querySelector(".link5").addEventListener("click", fjern);
         }
 
         function toggletopmenu() {
@@ -136,7 +172,7 @@
             console.log("funktion fjern virker");
             document.querySelector("#topmenu").classList.toggle("hidden");
 
-            let erSkjult = document.querySelector("#topmenu").classList.contains("hidden"); /*Lavet af Simon Christiansen*/
+            let erSkjult = document.querySelector("#topmenu").classList.contains("hidden"); 
 
             if (erSkjult == true) {
                 //        topmenuen er nu skjult - ændre den til☰
@@ -151,13 +187,16 @@
         let indhold;
         document.addEventListener("DOMContentLoaded", start);
 
-        function start() {
+         function start() {
             async function getJson() {
                 let url = "http://firehill.dk/kea/2/07/kalklandetWP/wordpress/wp-json/wp/v2/attraktion/60"
                 let jsonData = await fetch(url);
                 indhold = await jsonData.json();
                 visIndhold();
+                mediaQuery()
             }
+            
+            
 
             function visIndhold() {
                 document.querySelector(".splash").src = indhold.splash.guid;
@@ -175,9 +214,37 @@
                 document.querySelector(".adressen").innerHTML = indhold.adresse;
                 document.querySelector(".tiden").innerHTML = indhold.aabningstider;
                 document.querySelector(".rundvisningen").innerHTML = indhold.rundvisning;
+                                document.querySelector(".navlink1").src = indhold.undermenunav1.guid;
+                document.querySelector(".navlink2").src = indhold.undermenunav2.guid;
+                document.querySelector(".navlink3").src = indhold.undermenunav3.guid;
+                document.querySelector(".undermenulink1").href = indhold.undermenulink1;
+                document.querySelector(".undermenulink2").href = indhold.undermenulink2;
+                document.querySelector(".undermenulink3").href = indhold.undermenulink3;
             }
             getJson();
+            
+             function mediaQuery() {
+        let mq = window.matchMedia( "(max-width: 660px)" );
+        
+if (mq.matches) {
+    document.querySelector(".splash").src =[];
+    document.querySelector(".mobilsplash1").src = indhold.mobilsplash1.guid;
+    document.querySelector(".mobilsplash2").src = indhold.mobilsplash2.guid;
+    document.querySelector(".mobilsplash3").src = indhold.mobilsplash3.guid;
+    document.querySelector(".mobilsplash4").src = indhold.mobilsplash4.guid;
+    console.log("vertikal");
+    // window width is at less than 750px
+}
+else {
+    document.querySelector(".splash").src = indhold.splash.guid;
+    console.log("stort splash");
+    // window width is greater than 750px
+}
+             mq.addListener(mediaQuery);}
+            
+
         }
+     
     </script>
     <footer></footer>
 </body></html>

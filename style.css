@@ -23,6 +23,7 @@ img {
 
 h1 {
     font-family: "LimeStone_bold";
+     margin: 0;
 }
 
 h2 {
@@ -30,11 +31,13 @@ h2 {
     font-size: 24pt;
     letter-spacing: 1pt;
     text-transform: uppercase;
+    margin: 0;
 }
 
 h3 {
     font-family: "Arial", sans-serif;
     text-transform: uppercase;
+     margin: 0;
 }
 
 p {
@@ -71,15 +74,6 @@ a:hover {
 }
 
 
-section:nth-child(odd) {
-    background-color: white;
-}
-
-section:nth-child(even) {
-    background-color: #2F7993;
-    color: white;
-}
-
 .column {
     flex-basis: 400px;
     flex-grow: 1;
@@ -97,12 +91,19 @@ section:nth-child(even) {
 
 #forside_wrapper {
     margin: auto;
-    margin-top: -170vw;
+    margin-top: -188vw;
     max-width: 1200px;
     padding: 10px;
 }
 
 #splash_forside {
+    height: 200vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#splash_cover {
     height: 200vw;
     background-size: cover;
     background-position: center;
@@ -119,24 +120,23 @@ section:nth-child(even) {
 }
 
 #indhold {
-    margin: 30px -10px -10px -10px;
-    padding: 3px 10px;
-    background-color: #F5F4F4;
+    color: white;
 }
 
 #indhold h2 {
-    margin-top: 25px;
-    text-align: center;
+   text-align: center;
+    margin: 1rem;
+    margin-top: 3rem;
 }
 
 #indhold p {
     margin: auto;
-    margin-bottom: 25px;
+    margin-bottom: 50px;
     max-width: 800px;
 }
 
 #pris {
-    background-image: url(SVGs/Pris.svg);
+    background-image: url(SVGs/priser.svg);
     width: 34vw;
     height: 40vw;
     position: relative;
@@ -144,6 +144,7 @@ section:nth-child(even) {
     background-repeat: no-repeat;
     top: 1vw;
     left: 22vw;
+    padding-bottom: 4vw;
 }
 
 
@@ -157,11 +158,12 @@ section:nth-child(even) {
     background-repeat: no-repeat;
     top: 1vw;
     left: 22vw;
+    padding-bottom: 4vw;
 }
 
 
 #tider {
-    background-image: url(SVGs/Tider.svg);
+    background-image: url(SVGs/%C3%85bningstider.svg);
     width: 34vw;
     height: 40vw;
     position: relative;
@@ -169,6 +171,7 @@ section:nth-child(even) {
     background-repeat: no-repeat;
     top: 1vw;
     left: 22vw;
+    padding-bottom: 4vw;
 }
 
 #rundvisning {
@@ -180,6 +183,7 @@ section:nth-child(even) {
     background-repeat: no-repeat;
     top: 1vw;
     left: 22vw;
+    padding-bottom: 4vw;
 }
 
 .prisen {
@@ -198,17 +202,44 @@ section:nth-child(even) {
     text-align: center;
 }
 
-
-#column_container {
-    padding-right: 7.14286vw;
-    padding-left: 7.14286vw;
+#logoer {
+    font-size: 3em;
+    color: white;
 }
+
+.fab {
+    color: white;
+    padding-right: 4vw;
+}
+
+#button {
+ background-color: white;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+}
+
+#button:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
 
 #section_wrapper {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     margin: 1rem;
     grid-gap: 3rem;
+}
+
+#columnbesog{
+    padding-right: 7.14286vw;
+    padding-left: 7.14286vw;
 }
 
 
@@ -248,11 +279,30 @@ section:nth-child(even) {
     /* Set the width of the positioned div */
 }
 
+#undermenu {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 1rem;
+    grid-gap: 3rem;
+}
+
+
+.undermenulink1:hover{
+    opacity: 0.7
+}
+
+.undermenulink2:hover{
+    opacity: 0.7
+}
+
+.undermenulink3:hover{
+    opacity: 0.7
+}
+
 /*BURGERMENU*/
 #topmenu {
     list-style-type: none;
     transition: transform 1s;
-    background: #D6E1E2;
     z-index: 1;
     width: 100%;
     height: 100%;
@@ -264,14 +314,13 @@ section:nth-child(even) {
 
 #topmenu a {
     text-decoration: none;
-    color: black;
-    text-transform: uppercase;
+    color: white;
     font-size: 1.6rem;
 }
 
 
 #topmenu li {
-    padding-top: 7rem;
+    padding-top: 5.2rem;
     padding-left: 6rem;
 }
 
@@ -292,34 +341,70 @@ section:nth-child(even) {
 }
 
 .topnav {
+    position: fixed;
     list-style-type: none;
     transition: transform 1s;
     z-index: 1;
-    width: 44%;
-    padding: 0.8rem;
-    background: #D6E1E2;
-    position: absolute;
-    left: 51vw;
-    top: 1vw;
-    word-spacing: 3vw;
+    width: 11%;
+    padding: 0;
+    left: 89vw;
+    top: 1.8vw;
     display: none;
-
+    text-shadow: 2px 2px #690b0b;
+    color: white;
+    line-height: 2.3rem;
 }
 
 .topnav a {
     font-size: 1.3rem;
     text-decoration: none;
-    color: black;
-    text-transform: uppercase;
+    color: white;
+    padding: 25px;
+    font-family: LimeStone_bold;
 }
 
 .topnav a:hover {
     font-size: 1.4rem;
 }
 
+
+
+
+@keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: 0%; }
+}
+
+
+#captioned-gallery { 
+  width: 100%; overflow: hidden; 
+    display: block;
+}
+div.slider { 
+  position: relative; width: 500%; 
+  animation: 25s slidy ease-in-out infinite; 
+top: -1vw;
+}
+div.slider div { 
+  width: 19.8%; height: auto;
+  display: inline-block;  position: inherit; 
+}
+div.slider img { width: 100%; height: auto; }
+
+
+
+
+
 /* TABLET  */
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 815px) {
 
     /*    TYPOGRAFI */
 
@@ -340,6 +425,10 @@ section:nth-child(even) {
     #splash_forside {
         height: 100vw;
     }
+    
+    #splash_cover {
+        height: 100vw;
+    }
 
     #splash_forside .logo {
         text-align: left;
@@ -349,13 +438,6 @@ section:nth-child(even) {
 
     .burgermenu {
         display: none;
-    }
-
-
-
-    #indhold {
-        margin: 30px -40px -10px -40px;
-        padding: 3px 40px;
     }
 
 }
@@ -378,10 +460,14 @@ section:nth-child(even) {
 
     /*    FORSIDE */
     #forside_wrapper {
-        margin-top: -45vw;
+        margin-top: -55vw;
     }
 
     #splash_forside {
+        height: 60vw;
+    }
+    
+     #splash_cover {
         height: 60vw;
     }
 
@@ -390,16 +476,14 @@ section:nth-child(even) {
     }
 
     #section_wrapper {
-        display: grid;
         grid-template-columns: repeat(4, 1fr);
-        margin: 1rem;
-        grid-gap: 3rem;
     }
 
     #pris {
         width: 9vw;
         height: 11vw;
         left: 1vw;
+        padding-bottom: 2vw;
     }
 
 
@@ -407,12 +491,21 @@ section:nth-child(even) {
         width: 9vw;
         height: 11vw;
         left: 1vw;
+        padding-bottom: 2vw;
     }
 
     #tider {
         width: 9vw;
         height: 11vw;
         left: 1vw;
+        padding-bottom: 2vw;
+    }
+
+    #rundvisning {
+        width: 9vw;
+        height: 11vw;
+        left: 1vw;
+        padding-bottom: 2vw;
     }
 
     #splash_forside .logobox {
@@ -426,21 +519,7 @@ section:nth-child(even) {
         top: 50px;
     }
 
-    #indhold {
-        margin: 30px -1000px -10px -1000px;
-        padding: 3px 1000px;
-    }
 
-    #rundvisning {
-        width: 9vw;
-        height: 11vw;
-        left: 1vw;
-    }
-
-    #column_container {
-        padding-right: 0;
-        padding-left: 0;
-    }
 
     .prisen {
         text-align: left;
@@ -458,4 +537,39 @@ section:nth-child(even) {
         text-align: left;
     }
 
+    #undermenu {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 0.5rem;
+        grid-gap: 0.8rem;
+    }
+    
+    #captioned-gallery{
+        display: none;
+    }
+
 }
+
+
+@media screen and (min-width: 376px){
+   #topmenu li {
+    padding-top: 2.3rem;
+    padding-left: 18.5rem;
+}
+    #menuknap {
+    left: 91vw;
+    
+}
+    
+    #captioned-gallery{
+        display: none;
+        
+    }
+    
+    #undermenu {
+        margin: 0;
+        margin-top: 1rem;
+        grid-gap: 0.5rem;
+    }
+}
+
