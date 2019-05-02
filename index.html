@@ -49,6 +49,7 @@
                 let jsonData = await fetch(url);
                 indhold = await jsonData.json();
                 visIndhold();
+                mediaQuery()
             }
 
             function visIndhold() {
@@ -68,6 +69,22 @@
             }
 
             getJson();
+            
+             function mediaQuery() {
+                let mq = window.matchMedia("(max-width: 660px)");
+
+                if (mq.matches) {
+                    document.querySelector("#splash_cover").src = indhold.splashmobil.guid;
+                    console.log("vertikal");
+                    // window width is at less than 750px
+                } else {
+                    document.querySelector("#splash_cover").src = indhold.splashbillede.guid;
+                    console.log("stort splash");
+                    // window width is greater than 750px
+                }
+                mq.addListener(mediaQuery);
+            }
+
 
             async function getJson2() {
                 let url = "http://firehill.dk/kea/2/07/kalklandetWP/wordpress/wp-json/wp/v2/attraktion"
@@ -90,8 +107,9 @@
             }
 
             getJson2();
-
+            
         }
+           
     </script>
 </body>
 

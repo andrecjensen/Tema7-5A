@@ -1,5 +1,5 @@
 section:nth-child(even) {
-    background-color: white;
+    background-color: #f6fffb;
 }
 
 section:nth-child(odd) {
@@ -7,7 +7,6 @@ section:nth-child(odd) {
     color: white;
 }
 
-.topnav{background:#38728894; }
 
 #topmenu {
     background: #387288;

@@ -2,7 +2,6 @@
 
 body {
     margin: auto;
-    font-family: arial;
     box-sizing: border-box;
 }
 
@@ -10,7 +9,7 @@ img {
     width: 100%;
 }
 
-#cover img {
+.splash {
     height: 100%;
 }
 
@@ -35,18 +34,18 @@ h2 {
 }
 
 h3 {
-    font-family: "Arial", sans-serif;
+     font-family: "calibri";
     text-transform: uppercase;
     margin: 0;
 }
 
 p {
-    font-family: "Arial", sans-serif;
+     font-family: "calibri";
     font-size: 14pt;
 }
 
 a {
-    font-family: "Arial", sans-serif;
+    font-family: "calibri";
     color: #FF6600;
     text-decoration: none;
 }
@@ -87,27 +86,35 @@ a:hover {
 }
 
 
+
+.museumlogo {
+    position: absolute;
+    height: 22vw;
+    width: 18vw;
+    top: -3.2vw;
+    left: -1.2vw;
+    z-index: 1;
+    padding: 1.5rem;
+}
+
 /* FORSIDE - Splash */
 
 #forside_wrapper {
     margin: auto;
-    margin-top: -230vw;
+    margin-top: -42vw;
     max-width: 1200px;
     padding: 10px;
 }
 
-#splash_forside {
-    height: 195vw;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
 
 #splash_cover {
-    height: 230vw;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+        position: absolute;
+    z-index: -1;
+    top: 0vw;
+    height: 225vw;
 }
 
 #splash_forside .logo {
@@ -125,13 +132,13 @@ a:hover {
 
 #indhold h2 {
     text-align: center;
-    margin: 1rem;
+    margin: 2rem;
     margin-top: 16rem;
 }
 
 #indhold p {
     margin: auto;
-    margin-bottom: 50px;
+    margin-bottom: 22px;
     max-width: 800px;
 }
 
@@ -253,7 +260,6 @@ a:hover {
 }
 
 #attraktioner img {
-    position: relative;
     display: inline-block;
 
     /*    Skygge og animation */
@@ -331,7 +337,7 @@ a:hover {
 
 #menuknap {
     display: inline-block;
-    color: black;
+    color: #FF6600;
     font-size: 2rem;
     padding: 1.5rem;
     z-index: 2;
@@ -345,22 +351,25 @@ a:hover {
     list-style-type: none;
     transition: transform 1s;
     z-index: 1;
-    width: 11%;
+    width: 10%;
     padding: 0;
-    left: 89vw;
+    left: 88.9vw;
     top: 1.8vw;
     display: none;
-    text-shadow: 2px 2px #690b0b;
+    /* text-shadow: 2px 2px #690b0b; */
     color: white;
     line-height: 2.3rem;
+    background: #FF6600;
 }
 
 .topnav a {
     font-size: 1.3rem;
     text-decoration: none;
     color: white;
-    padding: 25px;
-    font-family: LimeStone_bold;
+    padding: 15;
+    margin: 0;
+    padding: 15px;
+    font-family: LimeStone_bold
 }
 
 .topnav a:hover {
@@ -438,6 +447,7 @@ div.slider img {
 
 
 
+
 /* TABLET  */
 
 @media only screen and (min-width: 815px) {
@@ -458,14 +468,6 @@ div.slider img {
         grid-template-columns: repeat(4, 1fr);
     }
 
-    #splash_forside {
-        height: 80vw;
-    }
-
-    #splash_cover {
-        height: 100vw;
-    }
-
     #splash_forside .logo {
         text-align: left;
         width: 30%;
@@ -473,7 +475,7 @@ div.slider img {
     }
 
     #indhold h2 {
-        margin-top: 14rem;
+        margin-top: 17rem;
     }
 
     .burgermenu {
@@ -493,6 +495,17 @@ div.slider img {
     #kontakt {
         padding: 3vw;
     }
+    
+    #splash_cover {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+        position:relative;
+    z-index: -1;
+    top: 0vw;
+    height: 100%;
+        display: block;
+}
 
     #cover {
         padding: 0vw;
@@ -503,16 +516,9 @@ div.slider img {
         margin-top: -55vw;
     }
 
-    #splash_forside {
-        height: 60vw;
-    }
-
-    #splash_cover {
-        height: 80vw;
-    }
 
     #indhold h2 {
-        margin-top: 10rem;
+        margin-top: 8rem;
     }
 
     .topnav {
@@ -524,7 +530,7 @@ div.slider img {
     }
 
     #pris {
-        width: 9vw;
+        width: 10vw;
         height: 11vw;
         left: 1vw;
         padding-bottom: 2vw;
@@ -532,8 +538,8 @@ div.slider img {
 
 
     #adresse {
-        width: 9vw;
-        height: 11vw;
+        width: 10.5vw;
+        height: 12vw;
         left: 1vw;
         padding-bottom: 2vw;
     }
@@ -562,8 +568,17 @@ div.slider img {
         width: 300px;
         top: 50px;
     }
+    
+    .museumlogo {
+    height: 10vw;
+    width: 8vw;
+    top: 1.8vw;
+    left: 1.8vw;
+}
 
-
+#indhold p {
+    margin-bottom: 42px;
+}
 
     .prisen {
         text-align: left;
@@ -586,6 +601,7 @@ div.slider img {
         grid-template-columns: repeat(3, 1fr);
         margin: 0.5rem;
         grid-gap: 0.8rem;
+        background-color: #f6fffb;
     }
 
     #captioned-gallery {

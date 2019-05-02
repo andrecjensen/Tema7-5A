@@ -24,9 +24,6 @@
 
         <div class="burgermenu">
             <div id="menuknap">☰</div>
-            <a href="#splash">
-                <div class="logo"></div>
-            </a>
             <ul id="topmenu" class="hidden">
                 <li><a href="#omos" class="link2">Om os</a></li>
                 <li><a href="#besog" class="link">Besøg</a></li>
@@ -42,7 +39,9 @@
 
 
    
-    <section id="cover"><img src="" alt="" class="splash">
+    <section id="cover">
+    <a href="../index.html"><img src="" alt="" class="museumlogo"></a>
+    <img src="" alt="" class="splash">
      <div id="captioned-gallery">
 	<div class="slider">
 		<div>
@@ -218,6 +217,7 @@
                 document.querySelector(".undermenulink1").href = indhold.undermenulink1;
                 document.querySelector(".undermenulink2").href = indhold.undermenulink2;
                 document.querySelector(".undermenulink3").href = indhold.undermenulink3;
+                document.querySelector(".museumlogo").src = indhold.logopaasplash.guid;
             }
             getJson();
             

@@ -1,13 +1,11 @@
 section:nth-child(even) {
-    background-color: white;
+    background-color: #f6fffb;
 }
 
 section:nth-child(odd) {
     background-color: #0082AD;
     color: white;
 }
-
-.topnav{background:#0082ad94; }
 
 #topmenu {
     background: #0082AD;
