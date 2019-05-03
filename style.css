@@ -236,6 +236,10 @@ a:hover {
     opacity: 0.8;
 }
 
+#button_container{
+    margin-left: 17vw;
+    margin-top: 10vw;
+}
 
 #section_wrapper {
     display: grid;
@@ -248,6 +252,10 @@ a:hover {
     padding-right: 7.14286vw;
     padding-left: 7.14286vw;
 }
+
+ .besoeg_titel{
+        margin-bottom: 10vw;
+    }
 
 
 /* FORSIDE – Attraktioner */
@@ -604,6 +612,15 @@ div.slider img {
 
     #captioned-gallery {
         display: none;
+    }
+    
+    #button_container{
+    margin-left: 1rem;
+    margin-top: 2rem;
+}
+    
+    .besoeg_titel{
+        margin-bottom: 0;
     }
 
 }
