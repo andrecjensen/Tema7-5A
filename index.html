@@ -94,19 +94,19 @@
             }
 
             function visAttraktioner() {
-                let dest = document.querySelector("#attraktioner");
-                let temp = document.querySelector("template");
+                let dest = document.querySelector("#attraktioner"); /*Angivet html-elementet "#attraktioner" som dest.*/
+                let temp = document.querySelector("template"); /*Angivet html-elementet "template" som temp.*/
 
                 attraktioner.forEach(attraktion => {
-                    let klon = temp.cloneNode(true).content;
-                    klon.querySelector(".splash").src = attraktion.splash.guid;
-                    klon.querySelector(".link").href = attraktion.link;
+                    let klon = temp.cloneNode(true).content; /*Erklærer at node skal klones ind i template. */
+                    klon.querySelector(".splash").src = attraktion.splash.guid; /*Her erklæres hvilke elementer der skal klones ind i templaten.*/
+                    klon.querySelector(".link").href = attraktion.link; 
                     klon.querySelector(".splash").src = attraktion.linkbillede_vertikal.guid;
-                    dest.appendChild(klon);
+                    dest.appendChild(klon); /*Her bliver der indsæt nye elementer som childeren i den angivet destination hvilket vil sige "#attraktioner" baseret ud fra de overstående elementer.*/ 
                 })
             }
 
-            getJson2();
+            getJson2(); /*Funktionen kaldes.*/
             
         }
            

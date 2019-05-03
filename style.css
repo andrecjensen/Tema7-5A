@@ -353,10 +353,10 @@ a:hover {
     z-index: 1;
     width: 10%;
     padding: 0;
-    left: 88.9vw;
+    left: 89.5vw;
     top: 1.8vw;
     display: none;
-    /* text-shadow: 2px 2px #690b0b; */
+    text-align: center;
     color: white;
     line-height: 2.3rem;
     background: #FF6600;
@@ -366,9 +366,7 @@ a:hover {
     font-size: 1.3rem;
     text-decoration: none;
     color: white;
-    padding: 15;
     margin: 0;
-    padding: 15px;
     font-family: LimeStone_bold
 }
 
@@ -379,7 +377,7 @@ a:hover {
 
 
 
-@keyframes slidy {
+@keyframes slidy { /*Animationens process, hvorledes hvordan billederne skal bevæge sig til venstre undervejs.*/
     0% {
         left: 0%;
     }
@@ -424,14 +422,14 @@ a:hover {
     display: block;
 }
 
-div.slider {
+div.slider { /*Slideshowets overordnet ramme, bredden er erklæderet ud fra antallet af billeder samt hvordan animationen skal køre.*/
     position: relative;
     width: 500%;
     animation: 25s slidy ease-in-out infinite;
     top: -1vw;
 }
 
-div.slider div {
+div.slider div { /*Billederne i slideshow, bredden er bestemt ud fra antallet af elementer*/
     width: 19.8%;
     height: auto;
     display: inline-block;

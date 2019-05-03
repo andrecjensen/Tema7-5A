@@ -21,18 +21,18 @@
             <li><a href="#undervisning" class="link3">Undervisning</a></li>
             <li><a href="#kontakt" class="link4">Kontakt</a></li>
 
-        </span>
+        </span> <!--Navigationsbaren på desktop-->
 
         <div class="burgermenu">
-            <div id="menuknap">☰</div>
-            <ul id="topmenu" class="hidden">
+            <div id="menuknap">☰</div> <!--Knappen som bringer burgermenuen frem.-->
+            <ul id="topmenu" class="hidden"> <!--Menuen som dukker op med navigationslisten.-->
                 <li><a href="../index.html" class="link5">Forside</a></li>
                 <li><a href="#omos" class="link2">Om os</a></li>
                 <li><a href="#besog" class="link">Besøg</a></li>
                 <li><a href="#undervisning" class="link3">Undervisning</a></li>
                 <li><a href="#kontakt" class="link4">Kontakt</a></li>
 
-            </ul>
+            </ul> 
         </div>
 
 
@@ -41,10 +41,10 @@
 
 
     <section id="cover">
-       <a href="../index.html"><img src="" alt="" class="museumlogo"></a>
-        <img src="" alt="" class="splash">
+       <a href="../index.html"><img src="" alt="" class="museumlogo"></a> <!--Logo til forsiden-->
+        <img src="" alt="" class="splash"> <!--Splash til Desktop-->
         <div id="captioned-gallery">
-            <div class="slider">
+            <div class="slider"> <!--Herunder ligger billederne til mobil samt slideshow, animationen er angivet i CSS.-->
                 <div>
                     <img src="" alt="" class="mobilsplash1">
 
@@ -113,8 +113,8 @@
 
     <section id="undervisning">
         <div class="column"><img src="" alt="" class="undervisning_billede"></div>
-        <div class="column">
-            <h2 class="undervisning_titel"></h2>
+        <div class="column"> 
+            <h2 class="undervisning_titel"></h2> <!--HTML element hvor indhold bliver indlæst via JSON.-->
             <p class="undervisning_indhold"></p>
         </div>
 
@@ -149,7 +149,7 @@
             document.querySelector(".link3").addEventListener("click", fjern);
             document.querySelector(".link4").addEventListener("click", fjern);
             document.querySelector(".link5").addEventListener("click", fjern);
-        }
+        } /*Denne funktion sætte eventlistener på naigationsbaren og bekræfter vinduet bliver loadet korrekt.*/
 
         function toggletopmenu() {
             console.log("toggle topmenu");
@@ -166,7 +166,7 @@
                 document.querySelector("#menuknap").textContent = " × "
 
             }
-        }
+        } /*Her bliver burgermenuen tooglet fra og til, dvs. den ændre "☰" til "X" når burgermenuen er aktiv.*/
 
 
         function fjern() {
@@ -184,9 +184,11 @@
 
             }
 
-        }
-        let indhold;
-        document.addEventListener("DOMContentLoaded", start);
+        } /*Burgermenuen bliver skjult til siden og "x" bliver til "☰".*/
+        
+        
+        let indhold; /*Her bliver indhold erklæderet som en variable*/
+        document.addEventListener("DOMContentLoaded", start);  /*Funktion start bliver anvendt når dom er loadet.*/
 
         function start() {
             async function getJson() {
@@ -195,7 +197,7 @@
                 indhold = await jsonData.json();
                 visIndhold();
                 mediaQuery()
-            }
+            } /*Her bliver JSON hentet fra vores backend (wordpress) til at hente dynamisk data. */
 
 
 
@@ -222,7 +224,7 @@
                 document.querySelector(".undermenulink2").href = indhold.undermenulink2;
                 document.querySelector(".undermenulink3").href = indhold.undermenulink3;
                 document.querySelector(".museumlogo").src = indhold.logopaasplash.guid;
-            }
+            } /*Her bliver de angivet HTML-elementer ændret dynamisk fra JSON. */
             getJson();
 
             function mediaQuery() {
@@ -242,7 +244,7 @@
                     // window width is greater than 750px
                 }
                 mq.addListener(mediaQuery);
-            }
+            } /*Mediaquery som ændre splashbillede til mobil format i bestemt størrelse. */
 
 
         }
