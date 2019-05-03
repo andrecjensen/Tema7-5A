@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geomusem Faxe - Kalklandet</title>
     <link rel="stylesheet" href="../style.css">
-    <link rel="faxe stylesheet" href="faxe.css">
+    <link rel="stylesheet" href="faxe.css">
     <link rel="icon stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 
@@ -14,25 +14,28 @@
     <nav>
 
 
-        <span class="topnav">
+        <ul class="topnav">
             <li><a href="../index.html" class="link5">Forside</a></li>
             <li><a href="#omos" class="link2">Om os</a></li>
             <li><a href="#besog" class="link">Besøg</a></li>
             <li><a href="#undervisning" class="link3">Undervisning</a></li>
             <li><a href="#kontakt" class="link4">Kontakt</a></li>
 
-        </span> <!--Navigationsbaren på desktop-->
+        </ul>
+        <!--Navigationsbaren på desktop-->
 
         <div class="burgermenu">
-            <div id="menuknap">☰</div> <!--Knappen som bringer burgermenuen frem.-->
-            <ul id="topmenu" class="hidden"> <!--Menuen som dukker op med navigationslisten.-->
+            <div id="menuknap">☰</div>
+            <!--Knappen som bringer burgermenuen frem.-->
+            <ul id="topmenu" class="hidden">
+                <!--Menuen som dukker op med navigationslisten.-->
                 <li><a href="../index.html" class="link5">Forside</a></li>
                 <li><a href="#omos" class="link2">Om os</a></li>
                 <li><a href="#besog" class="link">Besøg</a></li>
                 <li><a href="#undervisning" class="link3">Undervisning</a></li>
                 <li><a href="#kontakt" class="link4">Kontakt</a></li>
 
-            </ul> 
+            </ul>
         </div>
 
 
@@ -41,24 +44,27 @@
 
 
     <section id="cover">
-       <a href="../index.html"><img src="" alt="" class="museumlogo"></a> <!--Logo til forsiden-->
-        <img src="" alt="" class="splash"> <!--Splash til Desktop-->
+        <a href="../index.html"><img src="#" alt="Kalkland logo" class="museumlogo"></a>
+        <!--Logo til forsiden-->
+        <img src="#" alt="Splash billede af Geo faxe Museum Kalkland en del af østsjælland museum" class="splash">
+        <!--Splash til Desktop-->
         <div id="captioned-gallery">
-            <div class="slider"> <!--Herunder ligger billederne til mobil samt slideshow, animationen er angivet i CSS.-->
+            <div class="slider">
+                <!--Herunder ligger billederne til mobil samt slideshow, animationen er angivet i CSS.-->
                 <div>
-                    <img src="" alt="" class="mobilsplash1">
+                    <img src="#" alt="mobil Splash billede af Geo faxe Museum Kalkland en del af østsjælland museum" class="mobilsplash1">
 
                 </div>
                 <div>
-                    <img src="" alt="" class="mobilsplash2">
+                    <img src="#" alt="mobil Splash billede af Geo faxe Museum Kalkland en del af østsjælland museum" class="mobilsplash2">
 
                 </div>
                 <div>
-                    <img src="" alt="" class="mobilsplash3">
+                    <img src="#" alt="mobil Splash billede af Geo faxe Museum Kalkland en del af østsjælland museum" class="mobilsplash3">
 
                 </div>
                 <div>
-                    <img src="" alt="" class="mobilsplash4">
+                    <img src="#" alt="mobil Splash billede af Geo faxe Museum Kalkland en del af østsjælland museum" class="mobilsplash4">
 
                 </div>
             </div>
@@ -66,9 +72,9 @@
     </section>
 
     <div id="undermenu">
-        <a href="" class="undermenulink1"> <img src="" alt="" class="navlink1"></a>
-        <a href="" class="undermenulink2"> <img src="" alt="" class="navlink2"></a>
-        <a href="" class="undermenulink3"> <img src="" alt="" class="navlink3"></a>
+        <a href="" class="undermenulink1"> <img src="#" alt="billede af nyeretids museum navigation" class="navlink1"></a>
+        <a href="" class="undermenulink2"> <img src="#" alt="billede af stevns klint navigation" class="navlink2"></a>
+        <a href="" class="undermenulink3"> <img src="#" alt="billede af koldkrigs museum navigation" class="navlink3"></a>
     </div>
 
 
@@ -77,7 +83,7 @@
             <h2 class="omos_titel"></h2>
             <p class="omos_indhold"></p>
         </div>
-        <div class="column"><img src="" alt="" class="omos_billede"></div>
+        <div class="column"><img src="#" alt="billede fra om os sektion på geo faxe museum" class="omos_billede"></div>
     </section>
 
 
@@ -86,21 +92,21 @@
             <h2 class="besoeg_titel"></h2>
             <div id="section_wrapper">
 
-                <div id="column_container">
+                <div class="column_container">
                     <div id="pris"></div>
                     <p class="prisen">
                     </p>
                     <div id="button_container"><button id="button">Køb billet her</button></div>
                 </div>
-                <div id="column_container">
+                <div class="column_container">
                     <div id="adresse"></div>
                     <p class="adressen">Her står Adressen</p>
                 </div>
-                <div id="column_container">
+                <div class="column_container">
                     <div id="tider"></div>
                     <p class="tiden">Her står priserne</p>
                 </div>
-                <div id="column_container">
+                <div class="column_container">
                     <div id="rundvisning"></div>
                     <p class="rundvisningen">Her står priserne</p>
                 </div>
@@ -112,9 +118,10 @@
 
 
     <section id="undervisning">
-        <div class="column"><img src="" alt="" class="undervisning_billede"></div>
-        <div class="column"> 
-            <h2 class="undervisning_titel"></h2> <!--HTML element hvor indhold bliver indlæst via JSON.-->
+        <div class="column"><img src="#" alt="billede til undervisning sektion på geo faxe museum side" class="undervisning_billede"></div>
+        <div class="column">
+            <h2 class="undervisning_titel"></h2>
+            <!--HTML element hvor indhold bliver indlæst via JSON.-->
             <p class="undervisning_indhold"></p>
         </div>
 
@@ -127,9 +134,10 @@
         <div class="column">
             <h3 class="kontakt_titel"></h3>
             <p class="kontakt_indhold"></p>
-            <span id="logoer"><a href="https://www.facebook.com/stevnsklint/"><i class="fab fa-facebook"></i></a><a href="https://www.instagram.com/oestsjaellandsmuseum/"><i class="fab fa-instagram"></a></i></span>
+            <span id="logoer"><a href="https://www.facebook.com/stevnsklint/"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/oestsjaellandsmuseum/"><i class="fab fa-instagram"></i></a></span>
         </div>
-        <div class="column"><img src="" alt="" class="kontakt_billede"></div>
+        <div class="column"><img src="#" alt="billede under kontakt os sektion på geo faxe museum " class="kontakt_billede"></div>
 
 
 
@@ -185,10 +193,10 @@
             }
 
         } /*Burgermenuen bliver skjult til siden og "x" bliver til "☰".*/
-        
-        
+
+
         let indhold; /*Her bliver indhold erklæderet som en variable*/
-        document.addEventListener("DOMContentLoaded", start);  /*Funktion start bliver anvendt når dom er loadet.*/
+        document.addEventListener("DOMContentLoaded", start); /*Funktion start bliver anvendt når dom er loadet.*/
 
         function start() {
             async function getJson() {
@@ -248,9 +256,7 @@
 
 
         }
-
     </script>
     <footer></footer>
 </body>
-
 </html>

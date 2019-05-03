@@ -6,30 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stevns Klint - Kalklandet</title>
     <link rel="stylesheet" href="../style.css">
-<link rel="stevns stylesheet" href="stevnsklint.css">
+<link rel="stylesheet" href="stevnsklint.css">
 <link rel="icon stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 </head>
 <body>
-     <nav>
+    <nav>
 
 
-        <span class="topnav">
-       <li> <a href="../index.html">Forside</a></li>
-          <li> <a href="#omos">Om os</a></li>
-          <li>  <a href="#besog">Besøg</a></li>
-          <li>  <a href="#undervisning">Undervisning</a></li>
-           <li> <a href="#kontakt">Kontakt</a></li>
-        </span>
+        <ul class="topnav">
+            <li><a href="../index.html" class="link5">Forside</a></li>
+            <li><a href="#omos" class="link2">Om os</a></li>
+            <li><a href="#besog" class="link">Besøg</a></li>
+            <li><a href="#undervisning" class="link3">Undervisning</a></li>
+            <li><a href="#kontakt" class="link4">Kontakt</a></li>
+
+        </ul>
+        <!--Navigationsbaren på desktop-->
 
         <div class="burgermenu">
             <div id="menuknap">☰</div>
-            <li id="topmenu" class="hidden">
-            <ul><li><a href="../index.html" class="link5">Forside</a></li>
+            <!--Knappen som bringer burgermenuen frem.-->
+            <ul id="topmenu" class="hidden">
+                <!--Menuen som dukker op med navigationslisten.-->
+                <li><a href="../index.html" class="link5">Forside</a></li>
                 <li><a href="#omos" class="link2">Om os</a></li>
                 <li><a href="#besog" class="link">Besøg</a></li>
                 <li><a href="#undervisning" class="link3">Undervisning</a></li>
                 <li><a href="#kontakt" class="link4">Kontakt</a></li>
+
             </ul>
         </div>
 
@@ -38,37 +43,39 @@
     </nav>
 
 
-   
     <section id="cover">
-    <a href="../index.html"><img src="" alt="" class="museumlogo"></a>
-    <img src="" alt="" class="splash">
-     <div id="captioned-gallery">
-	<div class="slider">
-		<div>
-			 <img src="" alt="" class="mobilsplash1">
+        <a href="../index.html"><img src="#" alt="Kalkland logo" class="museumlogo"></a>
+        <!--Logo til forsiden-->
+        <img src="#" alt="Splash billede af stevns klint, Kalkland en del af østsjælland museum" class="splash">
+        <!--Splash til Desktop-->
+        <div id="captioned-gallery">
+            <div class="slider">
+                <!--Herunder ligger billederne til mobil samt slideshow, animationen er angivet i CSS.-->
+                <div>
+                    <img src="#" alt="mobil Splash billede af stevns klint Kalkland en del af østsjælland museum" class="mobilsplash1">
 
-		</div>
-		<div>
-			<img src="" alt="" class="mobilsplash2">
-		
-		</div>
-		<div>
-			<img src="" alt="" class="mobilsplash3">
-			
-		</div>
-		<div>
-			<img src="" alt="" class="mobilsplash4">
-			
-		</div>
-	</div>
-</div>
+                </div>
+                <div>
+                    <img src="#" alt="mobil Splash billede af stevns klint Museum Kalkland en del af østsjælland museum" class="mobilsplash2">
+
+                </div>
+                <div>
+                    <img src="#" alt="mobil Splash billede af stevns klint Museum Kalkland en del af østsjælland museum" class="mobilsplash3">
+
+                </div>
+                <div>
+                    <img src="#" alt="mobil Splash billede af stevns klint Museum Kalkland en del af østsjælland museum" class="mobilsplash4">
+
+                </div>
+            </div>
+        </div>
     </section>
 
-     <div id="undermenu">
-       <a href="" class="undermenulink1"> <img src="" alt="" class="navlink1"></a>
-       <a href="" class="undermenulink2"> <img src="" alt="" class="navlink2"></a>
-       <a href="" class="undermenulink3"> <img src="" alt="" class="navlink3"></a>
-       </div>
+    <div id="undermenu">
+        <a href="" class="undermenulink1"> <img src="#" alt="billede af nyeretids museum navigation" class="navlink1"></a>
+        <a href="" class="undermenulink2"> <img src="#" alt="billede af geo faxe navigation" class="navlink2"></a>
+        <a href="" class="undermenulink3"> <img src="#" alt="billede af koldkrigs museum navigation" class="navlink3"></a>
+    </div>
 
 
     <section id="omos">
@@ -76,32 +83,34 @@
             <h2 class="omos_titel"></h2>
             <p class="omos_indhold"></p>
         </div>
-        <div class="column"><img src="" alt="" class="omos_billede"></div>
+        <div class="column"><img src="#" alt="billede fra om os sektion på stevns klint" class="omos_billede"></div>
     </section>
 
 
     <section id="besog">
-       <div id="columnbesog">
-        <h2 class="besoeg_titel"></h2>
-        <div id="section_wrapper">
-            <div id="column_container">
-                <div id="pris"></div>
-                <p class="prisen">
-                </p>
+        <div id="columnbesog">
+            <h2 class="besoeg_titel"></h2>
+            <div id="section_wrapper">
+
+                <div class="column_container">
+                    <div id="pris"></div>
+                    <p class="prisen">
+                    </p>
+                    <div id="button_container"><button id="button">Køb billet her</button></div>
+                </div>
+                <div class="column_container">
+                    <div id="adresse"></div>
+                    <p class="adressen">Her står Adressen</p>
+                </div>
+                <div class="column_container">
+                    <div id="tider"></div>
+                    <p class="tiden">Her står priserne</p>
+                </div>
+                <div class="column_container">
+                    <div id="rundvisning"></div>
+                    <p class="rundvisningen">Her står priserne</p>
+                </div>
             </div>
-            <div id="column_container">
-                <div id="adresse"></div>
-                <p class="adressen">Her står Adressen</p>
-            </div>
-            <div id="column_container">
-                <div id="tider"></div>
-                <p class="tiden">Her står priserne</p>
-            </div>
-            <div id="column_container">
-                <div id="rundvisning"></div>
-                <p class="rundvisningen">Her står priserne</p>
-            </div>
-        </div>
         </div>
 
     </section>
@@ -109,12 +118,13 @@
 
 
     <section id="undervisning">
-        <div class="column"><img src="" alt="" class="undervisning_billede"></div>
+        <div class="column"><img src="#" alt="billede til undervisning sektion på stevns klint side" class="undervisning_billede"></div>
         <div class="column">
             <h2 class="undervisning_titel"></h2>
+            <!--HTML element hvor indhold bliver indlæst via JSON.-->
             <p class="undervisning_indhold"></p>
         </div>
-        
+
     </section>
 
 
@@ -124,10 +134,12 @@
         <div class="column">
             <h3 class="kontakt_titel"></h3>
             <p class="kontakt_indhold"></p>
-            <span id="logoer"><a href="https://www.facebook.com/stevnsklint/"><i class="fab fa-facebook"></i></a><a href="https://www.instagram.com/oestsjaellandsmuseum/"><i class="fab fa-instagram"></a></i></span>
+            <span id="logoer"><a href="https://www.facebook.com/stevnsklint/"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/oestsjaellandsmuseum/"><i class="fab fa-instagram"></i></a></span>
         </div>
-        <div class="column"><img src="" alt="" class="kontakt_billede"></div>
-        
+        <div class="column"><img src="#" alt="billede under kontakt os sektion på stevns klint museum " class="kontakt_billede"></div>
+
+
 
     </section>
 
@@ -145,7 +157,7 @@
             document.querySelector(".link3").addEventListener("click", fjern);
             document.querySelector(".link4").addEventListener("click", fjern);
             document.querySelector(".link5").addEventListener("click", fjern);
-        }
+        } /*Denne funktion sætte eventlistener på naigationsbaren og bekræfter vinduet bliver loadet korrekt.*/
 
         function toggletopmenu() {
             console.log("toggle topmenu");
@@ -162,7 +174,7 @@
                 document.querySelector("#menuknap").textContent = " × "
 
             }
-        }
+        } /*Her bliver burgermenuen tooglet fra og til, dvs. den ændre "☰" til "X" når burgermenuen er aktiv.*/
 
 
         function fjern() {
@@ -180,9 +192,11 @@
 
             }
 
-        }
-        let indhold;
-        document.addEventListener("DOMContentLoaded", start);
+        } /*Burgermenuen bliver skjult til siden og "x" bliver til "☰".*/
+
+
+        let indhold; /*Her bliver indhold erklæderet som en variable*/
+        document.addEventListener("DOMContentLoaded", start); /*Funktion start bliver anvendt når dom er loadet.*/
 
         function start() {
             async function getJson() {
@@ -191,9 +205,9 @@
                 indhold = await jsonData.json();
                 visIndhold();
                 mediaQuery()
-            }
-            
-            
+            } /*Her bliver JSON hentet fra vores backend (wordpress) til at hente dynamisk data. */
+
+
 
             function visIndhold() {
                 document.querySelector(".splash").src = indhold.splash.guid;
@@ -218,34 +232,31 @@
                 document.querySelector(".undermenulink2").href = indhold.undermenulink2;
                 document.querySelector(".undermenulink3").href = indhold.undermenulink3;
                 document.querySelector(".museumlogo").src = indhold.logopaasplash.guid;
-            }
+            } /*Her bliver de angivet HTML-elementer ændret dynamisk fra JSON. */
             getJson();
-            
-             function mediaQuery() {
-        let mq = window.matchMedia( "(max-width: 660px)" );
-        
-if (mq.matches) {
-    document.querySelector(".splash").src =[];
-    document.querySelector(".mobilsplash1").src = indhold.mobilsplash1.guid;
-    document.querySelector(".mobilsplash2").src = indhold.mobilsplash2.guid;
-    document.querySelector(".mobilsplash3").src = indhold.mobilsplash3.guid;
-    document.querySelector(".mobilsplash4").src = indhold.mobilsplash4.guid;
-    console.log("vertikal");
-    // window width is at less than 750px
-}
-else {
-    document.querySelector(".splash").src = indhold.splash.guid;
-    console.log("stort splash");
-    // window width is greater than 750px
-}
-             mq.addListener(mediaQuery);}
-            
+
+            function mediaQuery() {
+                let mq = window.matchMedia("(max-width: 660px)");
+
+                if (mq.matches) {
+                    document.querySelector(".splash").src = [];
+                    document.querySelector(".mobilsplash1").src = indhold.mobilsplash1.guid;
+                    document.querySelector(".mobilsplash2").src = indhold.mobilsplash2.guid;
+                    document.querySelector(".mobilsplash3").src = indhold.mobilsplash3.guid;
+                    document.querySelector(".mobilsplash4").src = indhold.mobilsplash4.guid;
+                    console.log("vertikal");
+                    // window width is at less than 750px
+                } else {
+                    document.querySelector(".splash").src = indhold.splash.guid;
+                    console.log("stort splash");
+                    // window width is greater than 750px
+                }
+                mq.addListener(mediaQuery);
+            } /*Mediaquery som ændre splashbillede til mobil format i bestemt størrelse. */
+
 
         }
-        
-
     </script>
     <footer></footer>
 </body>
-
 </html>
