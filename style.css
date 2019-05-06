@@ -482,6 +482,10 @@ div.slider img {
 
 
 
+ .hidden {
+     transform: translateX(-150%);
+
+ }
 
 
 
