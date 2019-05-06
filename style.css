@@ -276,7 +276,7 @@ a:hover {
     background-size: 100%;
     background-repeat: no-repeat;
     top: 45vw;
-    left: 48vw;
+    left: 97.7vh;
     padding-bottom: 4vw;
     animation: jump 3s infinite;
     display: none;
@@ -387,7 +387,7 @@ a:hover {
     z-index: 1;
     width: 10%;
     padding: 0;
-    left: 89.5vw;
+    left: 88.9vw;
     top: 0.8vw;
     display: none;
     text-align: center;
@@ -612,7 +612,7 @@ div.slider img {
     .museumlogo {
     height: 10vw;
     width: 8vw;
-    top: 1.8vw;
+    top: 1.1vw;
     left: 1.8vw;
 }
 
