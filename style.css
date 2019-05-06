@@ -275,14 +275,17 @@ a:hover {
     position: absolute;
     background-size: 100%;
     background-repeat: no-repeat;
-    top: 45vw;
-    left: 97.7vh;
     padding-bottom: 4vw;
-    animation: jump 3s infinite;
+    animation: jump 2s infinite;
     display: none;
+    bottom: 0%;
+    margin: auto;
+    display: block;
+    left: 48.5%;
+    right: 50%;
 }
 
-@keyframes jump { 0% { top: 45vw; } 50% { top: 43vw; } 100% { top: 45vw; } }
+@keyframes jump { 0% { top: 46vw; } 50% { top: 44vw; } 100% { top: 46vw; } }
 
 /* FORSIDE – Attraktioner */
 
@@ -387,7 +390,8 @@ a:hover {
     z-index: 1;
     width: 10%;
     padding: 0;
-    left: 88.9vw;
+left: 89.9%;
+    right: 50%;
     top: 0.8vw;
     display: none;
     text-align: center;
