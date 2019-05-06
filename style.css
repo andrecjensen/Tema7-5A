@@ -268,6 +268,22 @@ a:hover {
     }
 
 
+#arrow{
+  background-image: url(SVGs/arrow.svg);
+    width: 3vw;
+    height: 1vw;
+    position: absolute;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    top: 45vw;
+    left: 48vw;
+    padding-bottom: 4vw;
+    animation: jump 3s infinite;
+    display: none;
+}
+
+@keyframes jump { 0% { top: 45vw; } 50% { top: 43vw; } 100% { top: 45vw; } }
+
 /* FORSIDE – Attraktioner */
 
 #attraktioner {
@@ -575,6 +591,11 @@ div.slider img {
         height: 11vw;
         left: 1vw;
         padding-bottom: 2vw;
+    }
+    
+    
+    #arrow{
+        display: block;
     }
 
     #splash_forside .logobox {
