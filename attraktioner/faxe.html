@@ -46,7 +46,7 @@
     <section id="cover">
         <a href="../index.html"><img src="#" alt="Kalkland logo" class="museumlogo"></a>
         <!--Logo til forsiden-->
-        <img src="#" alt="Splash billede af Geo faxe Museum Kalkland en del af østsjælland museum" class="splash">
+        <img src="#" alt="Splash billede af Geo faxe Museum Kalkland en del af østsjælland museum" class="museumsplash">
         <!--Splash til Desktop-->
         <div id="captioned-gallery">
             <div class="slider">
@@ -210,7 +210,7 @@
 
 
             function visIndhold() {
-                document.querySelector(".splash").src = indhold.splash.guid;
+                document.querySelector(".museumsplash").src = indhold.splash.guid;
                 document.querySelector(".omos_titel").textContent = indhold.omos_titel;
                 document.querySelector(".omos_indhold").innerHTML = indhold.omos_indhold;
                 document.querySelector(".omos_billede").src = indhold.omos_billede.guid;
@@ -239,7 +239,7 @@
                 let mq = window.matchMedia("(max-width: 660px)");
 
                 if (mq.matches) {
-                    document.querySelector(".splash").src = [];
+                    document.querySelector(".museumsplash").src = [];
                     document.querySelector(".mobilsplash1").src = indhold.mobilsplash1.guid;
                     document.querySelector(".mobilsplash2").src = indhold.mobilsplash2.guid;
                     document.querySelector(".mobilsplash3").src = indhold.mobilsplash3.guid;
@@ -247,7 +247,7 @@
                     console.log("vertikal");
                     // window width is at less than 750px
                 } else {
-                    document.querySelector(".splash").src = indhold.splash.guid;
+                    document.querySelector(".museumsplash").src = indhold.splash.guid;
                     console.log("stort splash");
                     // window width is greater than 750px
                 }
