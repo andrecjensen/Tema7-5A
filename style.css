@@ -132,6 +132,10 @@ a:hover {
     border-radius: 0px;
 }
 
+#cover img{
+    border-radius: 0px; 
+}
+
 #indhold {
     color: white;
 }
