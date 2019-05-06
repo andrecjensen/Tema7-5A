@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kalklandet - en del af Østsjællands museum med museumerne Faxe Kalkbud, Stevns Klint og Stevnsfortet">
+    <meta name="keywords" content="østsjælland, stevnsfortet, stevns, koldkrigsmuseum, kolde krig, faxe, kalkbrud, klint, seværdigheder sjælland, seværdigheder danmark, dansk museum, danske museer, museum, museer i danmark, museer på sjælland, klint danmark, stevns klint, faxe alkbrud, fakse, naturcenter, geomuseum, geologisk museum, geologi, geologiske perioder, fossiljagt, kalk, klint vandretur, ferie danmark">
     <title>Kalklandet – Østsjællands Museum</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -11,13 +13,14 @@
 <body>
 
     <div id="splash_forside" style="">
-        <img src="#" id="splash_cover" alt="">
+        <img src="#" id="splash_cover" alt="splashbillede til kalklandets forside, en del af østsjællands museum">
         <div class="logobox">
-            <img src="#" alt="" class="logo">
+            <img src="#" alt="logo på kalklandet" class="logo">
         </div>
     </div>
 
     <div id="forside_wrapper">
+       <h1 style="display: none;">Kalklandet - en del af østsjællands museum</h1>
         <div id="indhold">
             <h2 class="overskrift"></h2>
             <p class="indhold"></p>
@@ -29,7 +32,7 @@
         <!-- TEMPLATE -->
         <template>
 
-            <a href="" class="link"><img src="#" alt="" class="splash"></a>
+            <a href="" class="link"><img src="#" alt="Attraktioner på Kalklandet, nyere tid, geomuseum faxe, koldkrigs museum og stevns klint." class="splash"></a>
 
 
         </template>
@@ -63,7 +66,6 @@
 
                 document.querySelector("#indhold .overskrift").textContent = indhold.tagline;
                 document.querySelector("#splash_forside .logo").src = indhold.logo.guid;
-
                 document.querySelector("#indhold .overskrift").textContent = indhold.title.rendered;
                 document.querySelector("#indhold .indhold").textContent = indhold.indhold;
             }
